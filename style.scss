@@ -1,0 +1,309 @@
+$header-color: rgb(17, 17, 193), purple;
+$primary-color: white;
+$font-color: rgb(41, 41, 41);
+$secondary-color: rgb(27, 41, 229);
+$profile-pic-border: rgb(214, 214, 214);
+$font: "Poppins", sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 14px;
+  font-family: $font;
+  color: $font-color;
+}
+
+//--------------------- HEADER ---------------------------------
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+  background: linear-gradient(to right, $header-color);
+}
+
+.profile-pic {
+  border: 5px solid $profile-pic-border;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+}
+
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+button {
+  width: 80px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.4s;
+}
+
+button > a {
+  text-decoration: none;
+  color: $primary-color;
+  font-size: 16px;
+}
+
+button:hover {
+  color: gray;
+  border-bottom: 2px solid $primary-color;
+}
+
+//--------------------- Projects page Main section ---------------------------------
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  padding: 40px 0;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.main-section-title {
+  font-size: 30px;
+  color: $secondary-color;
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 100px;
+  flex-wrap: wrap;
+}
+
+.content {
+  width: 300px;
+  height: auto;
+  border: 2px solid transparent;
+  transition: 0.4s;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.content:hover {
+  border: 2px solid $profile-pic-border;
+}
+
+.content-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+}
+.content-description {
+  width: 100%;
+}
+//--------------------- About page Main section ---------------------------------
+.personal-description {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+.personal-name {
+  font-size: 30px;
+  color: $secondary-color;
+  padding: 30px;
+}
+.computer-img {
+  margin: 50px;
+}
+.technologies {
+  padding: 50px 0;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.techs {
+  width: 100%;
+  height: auto;
+  // background-color: blue;
+}
+
+.tech-img {
+  width: 100%;
+  height: 200px;
+}
+.tech-size-adjustment {
+  width: 80%;
+}
+
+.tech-size-adjustment-1 {
+  height: 150px;
+  margin-top: 40px;
+}
+
+.tech-size-adjustment-2 {
+  width: 100%;
+  height: 170px;
+}
+//--------------------- Contact Main section ---------------------------------
+.btn-primary {
+  margin-top: 10px;
+}
+//--------------------- FOOTER ---------------------------------
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  background: linear-gradient(to right, $header-color);
+  color: $primary-color;
+}
+
+.social-media-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.social-icon {
+  font-size: 20px;
+}
+
+//--------------------- @Media ---------------------------------
+@media (max-width: 1000px) {
+  .technologies {
+    padding: 50px 0;
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 5px;
+    font-size: 12px;
+  }
+  .about-img > img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  .technologies {
+    padding: 50px 0;
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  .computer-img {
+    margin: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .nav-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .personal-description {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+    height: auto;
+  }
+  button > a {
+    font-size: 14px;
+  }
+
+  .content-img {
+    width: 100%;
+    height: auto;
+  }
+  .main-section {
+    padding: 5px;
+  }
+  button {
+    border: 1px solid $primary-color;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .personal-description {
+    padding-top: 20px;
+    font-size: 14px;
+  }
+  .personal-name {
+    font-size: 24px;
+  }
+
+  .technologies {
+    padding: 20px 0;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  .computer-img {
+    margin: 5px;
+  }
+  .tech-img {
+    width: 80%;
+    height: 80px;
+  }
+  .tech-size-adjustment {
+    width: 60%;
+  }
+
+  .tech-size-adjustment-1 {
+    height: 80px;
+    margin-top: 10px;
+  }
+
+  .tech-size-adjustment-2 {
+    width: 90%;
+    height: 85px;
+  }
+  .about-img > img {
+    width: 100%;
+  }
+}
