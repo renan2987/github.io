@@ -286,8 +286,8 @@ button:hover {
     margin-top: 10px;
   }
   .tech-size-adjustment-2 {
-    width: 90%;
-    height: 85px;
+    width: 100px;
+    height: auto;
   }
   .about-img > img {
     width: 100%;

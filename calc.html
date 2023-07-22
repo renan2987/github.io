@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calc.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <div class="calculator">
+          <div class="display">
+            <input type="text" name="display" placeholder="0" />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="AC"
+              class="special-character"
+              onclick="display.value = '' "
+            />
+            <input
+              type="button"
+              value="DE"
+              class="special-character"
+              onclick="display.value = display.value.toString().slice(0, -1)"
+            />
+            <input
+              type="button"
+              value="%"
+              class="special-character"
+              onclick="display.value += '%'"
+            />
+            <input
+              type="button"
+              value="&divide"
+              class="special-character"
+              onclick="display.value += '/'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="9"
+              class="number"
+              onclick="display.value += '9'"
+            />
+            <input
+              type="button"
+              value="8"
+              class="number"
+              onclick="display.value += '8'"
+            />
+            <input
+              type="button"
+              value="7"
+              class="number"
+              onclick="display.value += '7'"
+            />
+            <input
+              type="button"
+              value="&times"
+              class="special-character"
+              onclick="display.value += '*'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="6"
+              class="number"
+              onclick="display.value += '6'"
+            />
+            <input
+              type="button"
+              value="5"
+              class="number"
+              onclick="display.value += '5'"
+            />
+            <input
+              type="button"
+              value="4"
+              class="number"
+              onclick="display.value += '4'"
+            />
+            <input
+              type="button"
+              value="-"
+              class="special-character"
+              onclick="display.value += '-'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="3"
+              class="number"
+              onclick="display.value += '3'"
+            />
+            <input
+              type="button"
+              value="2"
+              class="number"
+              onclick="display.value += '2'"
+            />
+            <input
+              type="button"
+              value="1"
+              class="number"
+              onclick="display.value += '1'"
+            />
+            <input
+              type="button"
+              value="+"
+              class="special-character"
+              onclick="display.value += '+'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="0"
+              class="zero-span-2 number"
+              onclick="display.value += '0'"
+            />
+            <input
+              type="button"
+              value="."
+              class="special-character"
+              onclick="display.value += '.'"
+            />
+            <input
+              type="button"
+              value="="
+              class="special-character"
+              onclick="display.value = eval(display.value)"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="calc.js"></script>
+  </body>
+</html>
