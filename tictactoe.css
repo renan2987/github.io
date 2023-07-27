@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(27, 195, 225);
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+  gap: 55px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+#playBtn,
+.changeTurnsBtn {
+  font-size: 25px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#playBtn:active {
+  background-color: transparent;
+}
+.changeTurnsBtn:active {
+  background-color: transparent;
+}
+
+.changeTurnsBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+#players {
+  display: flex;
+  gap: 0 25px;
+}
+
+.hideBtn {
+  background-color: transparent;
+}
+#players li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.player-1-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 5px solid red;
+  display: inline-block;
+}
+.hideCircle {
+  border: none;
+}
+
+.player-2-cross {
+  width: 5px;
+  height: 22px;
+  background-color: rgb(16, 8, 251);
+  position: relative;
+  rotate: 45deg;
+  display: inline-block;
+  margin-left: 5px;
+}
+.player-2-cross:after {
+  width: 22px;
+  height: 5px;
+  background-color: rgb(16, 8, 251);
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -8px;
+}
+
+.game-board {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(27, 195, 225);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pointer {
+  cursor: pointer;
+  transition: 0.4s;
+}
+.pointer:active {
+  background-color: rgb(224, 221, 221);
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border: 15px solid red;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.cross {
+  background-color: rgb(16, 8, 251);
+  width: 20px;
+  height: 90px;
+  position: relative;
+  rotate: 45deg;
+}
+
+.cross:after {
+  background-color: rgb(16, 8, 251);
+  width: 90px;
+  height: 20px;
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: -33px;
+}
+
+@media (max-width: 320px) {
+  h2 {
+    font-size: 30px;
+  }
+  #players li {
+    font-size: 16px;
+    gap: 2px;
+  }
+
+  #playBtn,
+  .changeTurnsBtn {
+    font-size: 16px;
+  }
+
+  .game-board {
+    margin-top: -50px;
+    width: 190px;
+    height: 190px;
+    gap: 5px;
+  }
+  #playBtn {
+    font-size: 15px;
+  }
+  .box {
+    width: 60px;
+    height: 60px;
+  }
+  .circle {
+    width: 50px;
+    height: 50px;
+    border: 10px solid red;
+  }
+  .cross {
+    width: 10px;
+    height: 50px;
+  }
+  .cross:after {
+    width: 50px;
+    height: 10px;
+    top: 20px;
+    left: -20px;
+  }
+}
