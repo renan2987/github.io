@@ -33,7 +33,13 @@
         </div>
       </header>
       <main class="main-section">
-        <form action="" class="contact">
+        <form
+          action="send"
+          class="contact"
+          method="POST"
+          id="contact-form"
+          enctype="multipart/form-data"
+        >
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"
               >Email address</label
@@ -43,6 +49,7 @@
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="name@example.com"
+              required
             />
           </div>
           <div class="mb-3">
@@ -55,6 +62,7 @@
               rows="10"
               cols="50"
               placeholder="Type here..."
+              required
             ></textarea>
             <button type="submit" class="btn btn-primary mb-3">Send</button>
           </div>
